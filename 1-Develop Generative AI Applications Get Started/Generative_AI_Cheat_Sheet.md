@@ -3,7 +3,7 @@
 ## Setup & Configuration
 
 ### `pip install`
-**Description**: Installs the necessary Python libraries required for the course.
+**Description**: Installs the necessary Python libraries required for this project.
 ```bash
 %%capture
 !pip install "ibm-watsonx-ai==1.0.8" --user
@@ -29,7 +29,7 @@ from langchain_ibm import WatsonxLLM
 granite_llm = WatsonxLLM(
     model_id="ibm/granite-3-2-8b-instruct",
     url="https://us-south.ml.cloud.ibm.com",
-    project_id="skills-network",
+    project_id="your-project-id",
     params={
         "max_new_tokens": 256,
         "temperature": 0.5,
@@ -55,7 +55,7 @@ def llm_model(prompt_txt, params=None):
     granite_llm = WatsonxLLM(
         model_id=model_id,
         url="https://us-south.ml.cloud.ibm.com",
-        project_id="skills-network",
+        project_id="your-project-id",
         params=default_params
     )
 
